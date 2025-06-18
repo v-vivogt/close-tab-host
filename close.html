@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>Closing...</title>
+    <script>
+      window.onload = function () {
+        window.open('', '_self'); // Needed for Chrome
+        window.close();           // Attempt to close the tab
+      };
+    </script>
   </head>
   <body>
-    <p>Closing this tab...</p>
-    <script>
-      window.close();
-    </script>
+    <p>If this tab didn’t close automatically, <button onclick="window.close()">click here to close it</button>.</p>
   </body>
 </html>
+
